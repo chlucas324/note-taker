@@ -47,6 +47,6 @@ fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
 res.json(noteList);
 
 //start server to begin listening
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log(`Server now on port ${PORT}!`)
 });
