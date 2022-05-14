@@ -4,9 +4,9 @@ const express = require('express');
 const path = require('path');
 const { application } = require('express');
 
-//set up Express App to listen on port 3000
+//set up Express App to listen on port 3001
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Set up Express App to handle data parsing
 app.use(express.json());
@@ -47,4 +47,4 @@ fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
 res.json(noteList);
 
 //start server to begin listening
-app.listen(PORT, () => console.log("Server listening on port " + PORT));
+app.listen(PORT, () => console.log(`Server now on port ${PORT}!`));
