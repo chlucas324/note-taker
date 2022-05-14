@@ -2,7 +2,7 @@
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
-const { application } = require('express');
+
 
 //set up Express App to listen on port 3001
 const app = express();
