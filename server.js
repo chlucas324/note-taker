@@ -1,7 +1,7 @@
 //dependencies
 const fs = require('fs');
 const express = require('express');
-const path = require('path');
+// const path = require('path');
 
 //set up Express App to listen on port 3001
 const app = express();
