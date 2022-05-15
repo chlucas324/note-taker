@@ -9,7 +9,7 @@ const app = express();
 
 
 // Set up Express App to handle data parsing
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('/public'));
 // app.use(express.static('./'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
