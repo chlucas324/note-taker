@@ -1,14 +1,14 @@
-var path = require("path");
+const path = require('path');
 
-//HMTL Routing:
+
+//route to notes.html
 module.exports = (app) => {
-    //* GET `/notes` - Should return the `notes.html` file.
-    app.get("/notes", function (req, res) {
-        res.sendFile(path.join(__dirname, "./public/notes.html"));
-    });
-    
-    //* GET `*` - Should return the `index.html` file
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "./public/index.html"));
-    });
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+});
+
+// route to index.html
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 };
