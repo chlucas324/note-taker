@@ -37,14 +37,15 @@ app.post('/api/notes', (req, res) => {
     };
     let noteList = JSON.parse(fs.readFileSync('./db/db/json', 'utf8'));
     let noteLength = (noteList.length).toString();
-});
 
 // push updated note
+newNote.id = noteLength;
 noteList.push(newNote);
 
 // write updated data to db/db.json
 fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
 res.json(noteList);
+});
 
 //start server to begin listening
 app.listen(PORT, () => {
