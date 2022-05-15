@@ -5,12 +5,12 @@ const fs = require("fs");
 module.exports = (app) => {
     let noteList = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
 
-    app.get("/api/notes", (req,res) => {
+    app.get("/api/notes/", (req,res) => {
         return res.json(noteList);
     });
 
 // receive and return new note
-app.post("/api/notes", (req, res) => {
+app.post("/api/notes/", (req, res) => {
     //get id of last note
     let lastId;
     if (noteList.length) {
@@ -29,7 +29,7 @@ app.post("/api/notes", (req, res) => {
 });
 
 // delete note
-app.delete("/api/notes/:id", (req, res) => {
+app.delete("/api/notes/${id}", (req, res) => {
     // search for note by id, convert the string into JSON object
     let findNote = noteList.find(({ id }) => id === JSON.parse(req.params.id));
 
