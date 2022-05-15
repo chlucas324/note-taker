@@ -1,6 +1,7 @@
 //dependencies
 const express = require('express');
-// const fs = require('fs');
+const fs = require('fs');
+const path = require('path');
 
 //set up Express App to listen on port 3001
 const PORT = process.env.PORT || 3001;
@@ -15,8 +16,8 @@ app.use(express.json());
 
 
 //require routes.js files
-require('./Routes/apiRoutes');
-require('./Routes/htmlRoutes');
+require('./Routes/apiRoutes')(app);
+require('./Routes/htmlRoutes')(app);
 
 //start server to begin listening
 app.listen(PORT, () => {
