@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 //require routes.js files
-require('./apiRoutes');
-require('./htmlRoutes');
+require('./Routes/apiRoutes');
+require('./Routes/htmlRoutes');
 
 //start server to begin listening
 app.listen(PORT, () => {
