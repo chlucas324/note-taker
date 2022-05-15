@@ -1,5 +1,5 @@
+//dependencies
 const path = require('path');
-
 
 //route to notes.html
 module.exports = (app) => {
@@ -12,3 +12,4 @@ app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 };
+
