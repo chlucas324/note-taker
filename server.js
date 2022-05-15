@@ -3,8 +3,8 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 
-//set up Express App to listen on port 8000
-const PORT = process.env.PORT || 8000;
+//set up Express App to listen on port 3001
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 

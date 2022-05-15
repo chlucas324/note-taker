@@ -1,5 +1,5 @@
 //dependencies
-const path = require("path");
+var path = require("path");
 
 //route to notes.html
 module.exports = (app) => {
