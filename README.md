@@ -4,6 +4,9 @@
 
 This application can be used to write and save notes. The application uses an Express.js back end and will save and retrieve note data from a JSON file.
 
+<img width="1440" alt="Screen Shot 2022-06-14 at 6 28 17 PM" src="https://user-images.githubusercontent.com/91441453/173699961-72a5a4d1-5e4b-4282-bfeb-e9186a4a7cb0.png">
+
+
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
